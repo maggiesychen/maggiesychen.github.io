@@ -1,1 +1,1 @@
-# -maggiesychen-.github.io
+# maggiesychen.github.io
