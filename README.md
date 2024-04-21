@@ -1,6 +1,5 @@
-# h1 heading 
-## h2 heading
-### h3 heading 
+## I'm a MD-PhD student at Stanford University. Previously, I graduate from Harvard College with a degree in developmental biology/history of science, and completed a Marshall Scholarship at Imperial College London. 
+
 
 
 [I'm an inline-style link](https://www.google.com)
