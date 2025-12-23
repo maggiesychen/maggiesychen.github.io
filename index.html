@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maggie S. Chen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000;
+            background-color: #fff;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 200px;
+            padding: 40px 30px;
+            position: fixed;
+            height: 100vh;
+            background-color: #fff;
+        }
+
+        .sidebar h1 {
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .sidebar h1 a {
+            color: #000;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .sidebar h1 a:hover {
+            opacity: 0.6;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+        }
+
+        .sidebar nav ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar nav ul li a {
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 0.3px;
+            transition: opacity 0.2s;
+        }
+
+        .sidebar nav ul li a:hover {
+            opacity: 0.6;
+        }
+
+        .sidebar nav ul li a.active {
+            font-weight: bold;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 200px;
+            padding: 60px 80px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .section h2 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        .section p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .section ul {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .section ul li {
+            margin-bottom: 15px;
+            padding-left: 0;
+        }
+
+        .section ul li a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+                padding: 30px;
+            }
+
+            .sidebar h1 {
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+
+            .sidebar nav ul {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .sidebar nav ul li {
+                margin-bottom: 0;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 30px 20px;
+                max-width: 100%;
+            }
+
+            .section p {
+                font-size: 15px;
+            }
+        }
+
+        /* Tablet breakpoint */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .main-content {
+                padding: 50px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <h1><a href="#" class="home-link" data-section="home">Maggie S. Chen</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active" data-section="home">home</a></li>
+                <li><a href="#" class="nav-link" data-section="writing">writing</a></li>
+                <li><a href="#" class="nav-link" data-section="research">research</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <section id="home" class="section active">
+            <p>I am a MD-PhD candidate at Stanford University, with a research focus on regulatory genomics in cardiovascular disease. Previously, I studied developmental biology and history of science at Harvard College. I also hold a MRes in Bioengineering from Imperial College London via the British Marshall Scholarship.</p>
+            <p>As a science journalist, I cover biology, biotechnology, bioengineering, and funky animals.</p>
+        </section>
+
+        <section id="writing" class="section">
+            <p>Among other topics, I've covered <a href=https://www.growbyginkgo.com/2024/08/30/making-new-biology/>generative AI in biology</a>, COVID (<a href=https://www.wired.com/story/unruly-gut-fungi-can-make-your-covid-worse-infection-coronavirus-candida-albicans/>here</a>, <a href=https://www.wired.com/story/these-vaccines-will-take-aim-at-covid-and-its-entire-sars-lineage/>here</a>, and <a href=https://www.wired.com/story/the-secrets-of-covid-brain-fog-are-starting-to-lift/>here), <a href=https://www.wired.com/story/the-fall-of-roe-makes-complex-pregnancies-even-riskier/>Roe v Wade</a>, and the marvelous biochemistry of <a href=https://www.wired.com/story/what-humans-can-learn-from-the-sea-cucumbers-toxic-arsenal/>sea cucumbers</a>. I am a contributing writer for WIRED Science and was a 2022 AAAS Mass Media Fellow there.</p>
+            <p>Here is a running list of some of my written work.</p>
+            <ul>
+                <li><a href="https://www.wired.com/story/the-chaos-of-nih-cuts-has-left-early-career-scientists-scrambling/"><em>The Chaos of NIH Cuts Has Left Early-Career Scientists Scrambling</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/unruly-gut-fungi-can-make-your-covid-worse-infection-coronavirus-candida-albicans/"><em>Unruly Gut Fungi Can Make Your Covid Worse</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/this-prosthetic-limb-actually-attaches-to-the-wearers-nerves/"><em>This Prosthetic Limb Actually Attaches to the Wearer's Nerves</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/brain-stimulation-improves-memory-sleep/"><em>Gentle Brain Stimulation Can Improve Memory During Sleep</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/the-quest-for-a-switch-to-turn-on-hunger/"><em>The Quest for a Switch to Turn on Hunger</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/long-covid-breathlessness-monocytes-symptoms/"><em>The Long Covid Mystery Has a New Suspect</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/covid-can-boost-your-response-to-flu-vaccines-if-youre-a-man/"><em>Covid Can Boost Your Response to Flu Vaccines—if You're a Man</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/why-do-you-get-sick-in-the-winter-blame-your-nose/"><em>Why Do You Get Sick in the Winter? Blame Your Nose</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/this-low-cost-test-for-hearing-loss-lives-on-a-smartphone/"><em>This Low-Cost Test for Hearing Loss Lives on a Smartphone</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/the-spooky-science-of-how-undead-spores-reanimate/"><em>The Spooky Science of How Undead Spores Reanimate</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/to-understand-brain-disorders-consider-the-astrocyte/"><em>To Understand Brain Disorders, Consider the Astrocyte</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/randall-munroe-is-back-to-answer-your-impossible-questions/"><em>Randall Munroe Is Back to Answer Your Impossible Questions</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/what-if-cells-kept-receipts-of-their-gene-expression/"><em>What If Cells Kept Receipts of Their Gene Expression?</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/the-fall-of-roe-makes-complex-pregnancies-even-riskier/"><em>The Fall of Roe Makes Complex Pregnancies Even Riskier</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/this-stamp-sized-ultrasound-patch-can-image-internal-organs/"><em>This Stamp-Sized Ultrasound Patch Can Image Internal Organs</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/these-vaccines-will-take-aim-at-covid-and-its-entire-sars-lineage/"><em>These Vaccines Will Take Aim at Covid—and Its Entire SARS Lineage</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/what-humans-can-learn-from-the-sea-cucumbers-toxic-arsenal/"><em>What Humans Can Learn From the Sea Cucumber's Toxic Arsenal</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/the-secrets-of-covid-brain-fog-are-starting-to-lift/"><em>The Secrets of Covid 'Brain Fog' Are Starting to Lift</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/what-polar-bear-genomes-may-reveal-about-life-in-a-low-ice-arctic/"><em>What Polar Bear Genomes May Reveal About Life in a Low-Ice Arctic</em>, for WIRED</a></li>
+                <li><a href="https://www.wired.com/story/how-the-sugars-in-spit-tame-the-bodys-unruly-fungi/"><em>How the Sugars In Spit Tame the Body's Unruly Fungi</em>, for WIRED</a></li>
+                <li><a href="https://www.scientificamerican.com/article/coffee-boosts-beneficial-gut-bacterium/"><em>Coffee Boosts Beneficial Gut Bacterium</em>, for Scientific American</a></li>
+                <li><a href="https://www.scientificamerican.com/article/colon-cancer-linked-to-mouth-bacteria/"><em>Colon Cancer Linked to Mouth Bacteria</em>, for Scientific American</a></li>
+                <li><a href="https://www.the-scientist.com/how-science-competitions-fuel-biology-breakthroughs-73496"><em>How Science Competitions Fuel Biology Breakthroughs</em>, for The Scientist</a></li>
+                <li><a href="https://www.the-scientist.com/introducing-a-new-version-of-the-cell-cycle-72121"><em>Introducing a New Version of the Cell Cycle</em>, for The Scientist</a></li>
+                <li><a href="https://www.the-scientist.com/a-prime-editing-based-approach-records-cellular-genetic-history-72116"><em>A Prime-Editing Based Approach Records Cellular Genetic History</em>, for The Scientist</a></li>
+                <li><a href="https://www.the-scientist.com/how-the-crimean-congo-virus-sneaks-into-cells-72005"><em>How the Crimean Congo Virus Sneaks into Cells</em>, for The Scientist</a></li>
+                <li><a href="https://www.the-scientist.com/a-twisted-secret-that-extends-mrna-longevity-in-cells-71975"><em>A Twisted Secret that Extends mRNA Longevity in Cells</em>, for The Scientist</a></li>
+                <li><a href="https://www.the-scientist.com/an-epigenetic-strategy-to-control-bad-cholesterol-71772"><em>An Epigenetic Strategy to Control Bad Cholesterol</em>, for The Scientist</a></li>
+                <li><a href="https://www.drugdiscoverynews.com/the-history-of-anti-vegf-therapies-16642"><em>The history of anti-VEGF therapies</em>, for Drug Discovery News</a></li>
+                <li><a href="https://www.drugdiscoverynews.com/finding-new-strategies-to-treat-pompe-disease-16221"><em>Finding new strategies to treat Pompe disease</em>, for Drug Discovery News</a></li>
+                <li><a href="https://www.drugdiscoverynews.com/boosting-ovarian-cancer-immunotherapy-with-fatty-acid-uptake-16205"><em>Boosting ovarian cancer immunotherapy with fatty acid uptake</em>, for Drug Discovery News</a></li>
+                <li><a href="https://www.drugdiscoverynews.com/a-new-twist-on-the-brca1-cancer-gene-16200"><em>A new twist on the BRCA1 cancer gene</em>, for Drug Discovery News</a></li>
+                <li><a href="https://www.drugdiscoverynews.com/immune-cell-dysfunction-could-explain-severe-rsv-in-children-16164"><em>Immune cell dysfunction could explain severe RSV in children</em>, for Drug Discovery News</a></li>
+                <li><a href="https://www.drugdiscoverynews.com/fatty-acids-restore-normalcy-to-the-vaginal-microbiome-16122"><em>Fatty acids restore normalcy to the vaginal microbiome</em>, for Drug Discovery News</a></li>
+                <li><a href="https://www.drugdiscoverynews.com/crispr-strategy-could-restore-delayed-onset-hearing-loss-16116"><em>CRISPR strategy could restore delayed-onset hearing loss</em>, for Drug Discovery News</a></li>
+                <li><a href="https://www.drugdiscoverynews.com/targeting-disease-proteins-with-molecular-matchmakers-15959"><em>Targeting disease proteins with molecular matchmakers</em>, for Drug Discovery News</a></li>
+                <li><a href="https://www.drugdiscoverynews.com/science-milestone-the-evolution-of-gene-therapy-15908"><em>Science Milestone: The evolution of gene therapy</em>, for Drug Discovery News</a></li>
+                <li><a href="https://www.drugdiscoverynews.com/recombinant-polyclonal-antibodies-for-viral-diseases-15900"><em>Recombinant polyclonal antibodies for viral diseases</em>, for Drug Discovery News</a></li>
+                <li><a href="https://www.drugdiscoverynews.com/an-mrna-twist-to-the-hiv-vaccine-problem-15743"><em>An mRNA twist to the HIV vaccine problem</em>, for Drug Discovery News</a></li>
+                <li><a href="https://www.drugdiscoverynews.com/a-vitamin-sized-device-samples-the-gut-microbiome-15713"><em>A vitamin-sized device samples the gut microbiome</em>, for Drug Discovery News</a></li>
+                <li><a href="https://www.nytimes.com/2020/08/18/style/tiny-modern-love-stories-coronavirus-the-other-iris.html"><em>Tiny Love Stories: 'Lenny Was Supposed to Fall for the Other Iris'</em>, for The New York Times</a></li>
+                <li><a href="https://www.growbyginkgo.com/2024/08/30/making-new-biology/"><em>Making New Biology</em>, for Grow by Ginkgo</a></li>
+                <li><a href="https://ideasmatter.co/2024/03/27/what-is-healthy-aging/"><em>What is Healthy Aging?</em>, for Ideas Matter</a></li>
+            </ul>
+        </section>
+
+        <section id="research" class="section">
+            <p>I am currently completing my PhD in Genetics, advised by Jesse Engreitz. I am particularly interested in leveraging complex biological models to uncover the gene regulatory networks driving congenital heart disease. </p>
+            <p>To view my publications, please visit my <a href="https://scholar.google.com/citations?user=RJaOsCQAAAAJ&hl=en">Google Scholar page</a>.</p>
+        </section>
+    </main>
+
+    <script>
+        // Navigation functionality
+        function showSection(sectionId) {
+            // Remove active class from all links and sections
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            
+            // Show corresponding section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to corresponding nav link
+            const navLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
+            if (navLink) {
+                navLink.classList.add('active');
+            }
+        }
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('data-section');
+                showSection(sectionId);
+            });
+        });
+
+        document.querySelector('.home-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            showSection('home');
+        });
+    </script>
+</body>
+</html>
